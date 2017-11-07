@@ -17,6 +17,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ["standard"]
 
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 set number
 
 set tabstop=2 expandtab
@@ -25,3 +27,6 @@ set shiftwidth=2
 call plug#begin()
 Plug 'janko-m/vim-test'
 call plug#end()
+
+set mouse=a
+set clipboard=unnamed
