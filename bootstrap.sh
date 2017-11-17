@@ -13,6 +13,10 @@ function doIt() {
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
+  pushd ~/.vim/bundle/YouCompleteMe
+  git submodule update --init --recursive
+  ~/.vim/bundle/YouCompleteMe/install.py --js-completer --go-completer --clang-completer
+  popd
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
