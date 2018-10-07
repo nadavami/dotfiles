@@ -12,6 +12,7 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
+  echo "[[ $TERM != \"screen\" ]] && exec tmux" >> ~/.bashrc
 	source ~/.bash_profile;
   pushd ~/.vim/bundle/YouCompleteMe
   git submodule update --init --recursive
